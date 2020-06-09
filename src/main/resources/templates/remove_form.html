@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<title>User Registration</title>
+
+<head>Are you sure?
+    <meta charset="ISO-8859-1">
+    <style >
+            label {
+                display: inline-block;
+                width: 50px;
+                margin: 5px;
+                text-align: left;
+            }
+            button {
+                padding: 5px;
+                margin: 10px;
+            }
+        </style>
+</head>
+<a href="/subscribe">I changed my mind! Click here to subscribe</a>
+<div>
+    <form action="#" th:action="@{/unsubscribe}" method="post" th:object="${old_user}">
+        <label>E-mail:</label>
+        <input type="text" th:field=*{email} /><br/>
+        <button type="submit">Unsubscribe</button>
+    </form>
+</div>
+</body>
+</html>

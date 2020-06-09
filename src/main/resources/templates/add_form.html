@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+
+    <head>Please fill in your information to subscribe!
+        <meta charset="ISO-8859-1">
+        <title>User Registration</title>
+        <style >
+            label {
+                display: inline-block;
+                width: 50px;
+                margin: 5px;
+                text-align: left;
+            }
+            button {
+                padding: 5px;
+                margin: 10px;
+            }
+        </style>
+    </head>
+    <div>
+    <form action="#" th:action="@{/subscribe}" method="post" th:object="${user}">
+        <label>Name:</label>
+        <input type="text" th:field="*{name}" /><br/>
+        <label>E-mail:</label>
+        <input type="text" th:field="*{email}" /><br/>
+        <button type="submit">Subscribe</button>
+    </form>
+    </div>
+    </body>
+</html>
